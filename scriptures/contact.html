@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="navbar-logo">
+                
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="current-page">Contact Us</a></li>
+            </ul>
+            <a href="index.html" class="return-home-button">Return to Home</a>
+        </nav>
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+        <section class="feedback-form">
+            <h2>Give Us Your Feedback</h2>
+            <form action="submit_feedback.php" method="POST">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
