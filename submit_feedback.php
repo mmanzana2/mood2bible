@@ -21,11 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send the email.
     if (mail($toEmail, $emailSubject, $emailBody, $headers)) {
         // Email sent successfully.
-        echo json_encode(array("status" => "success", "message" => "Thank you for your feedback! We will get back to you soon."));
+        $response = array("status" => "success", "message" => "Thank you for your feedback! We will get back to you soon.");
     } else {
         // Failed to send email.
-        echo json_encode(array("status" => "error", "message" => "Oops! Something went wrong. Please try again later."));
+        $response = array("status" => "error", "message" => "Oops! Something went wrong. Please try again later.");
     }
+
+    // Return JSON response.
+    echo json_encode($response);
 } else {
     // If the request method is not POST.
     http_response_code(403); // Forbidden

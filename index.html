@@ -6,11 +6,17 @@
     <title>Inspirational Quotes - Find Your Inspiration</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    function showQuote(mood) {
+        window.location.href = `quote.html?mood=${mood}`;
+    }
+</script>
+    
 </head>
 <body>
     <header>
         <h2>Mood2Bible</h2>
-        <h1>Find Your Inspiration</h1>
+        <h1>Find Your Inspiration!</h1>
         <p>How are you feeling now?</p>
         <a href="contact.html" class="feedback-button">Give Feedback</a>
     </header>
@@ -32,10 +38,12 @@
         <button onclick="showQuote('hopeful')"><i class="fas fa-hand-holding-heart"></i> Hopeful</button>
         <button onclick="showQuote('lonely')"><i class="fas fa-user-slash"></i> Lonely</button>
         <button onclick="showQuote('playful')"><i class="fas fa-laugh-squint"></i> Playful</button>
+        <button onclick="showQuote('suicidal')"><i class="fas fa-heart-broken"></i> Suicidal</button>
     </div>
-    <div class="quote-display">
-        <p id="quote"></p>
-    </div>
-    <script src="script.js"></script>
+   
+        
+    
+    
 </body>
 </html>
+  

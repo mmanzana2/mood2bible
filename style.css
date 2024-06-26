@@ -1,0 +1,314 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    font-size: 28px;
+    color: #ffcc00;
+    text-decoration: none;
+}
+header .navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffcc00;
+}
+
+header .navbar-logo img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+header .navbar-links {
+    list-style-type: none;
+    display: flex;
+}
+
+header .navbar-links li {
+    margin-right: 20px;
+}
+
+header .navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+header .navbar-links li a.current-page {
+    color: #ffcc00;
+}
+
+.return-home-button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.return-home-button:hover {
+    background-color: #ffaa00;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #ffcc00;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.feedback-button, .return-home-button, .next-quote-button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-button:hover, .return-home-button:hover, .next-quote-button:hover {
+    background-color: #ffaa00;
+}
+
+.feedback-button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-button:hover {
+    background-color: #ffaa00;
+}
+
+/* Mood buttons styles */
+.mood-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mood-buttons button {
+    background-color: #444;
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mood-buttons button i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.mood-buttons button:hover {
+    background-color: #ffcc00;
+    color: #000;
+    border: 2px solid #000;
+}
+
+/* Quote display styles */
+.quote-display {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+
+.quote-display p {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Feedback form styles */
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-form h2 {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.feedback-form form {
+    text-align: left;
+}
+
+.feedback-form label {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    background-color: #444;
+    color: #fff;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+}
+
+.feedback-form button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #ffaa00;
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .navbar-links {
+        margin-top: 10px;
+    }
+
+    header .navbar-links li {
+        margin-right: 10px;
+    }
+
+    header .navbar-links li a {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+    .return-home-button {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 15px;
+    }
+
+    .feedback-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .mood-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px auto; /* Adjust margin for spacing */
+        max-width: 100%; /* Adjust max-width for container size */
+        flex-wrap: wrap;
+        
+    }
+
+    .mood-buttons button {
+        padding: 16px 32px;
+        font-size: 12px;
+        margin: 4px;
+        width: calc(33.33% - 17px); /* Adjust button width minus gap */
+    }
+
+    .quote-display {
+        font-size: 18px;
+    }
+
+    .feedback-form {
+        padding: 10px;
+    }
+
+    .feedback-form h2 {
+        font-size: 24px;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form textarea {
+        font-size: 14px;
+    }
+
+    .feedback-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    header .navbar-links li a.current-page {
+        color: #ffcc00;
+        display: none;
+    }
+
+}
